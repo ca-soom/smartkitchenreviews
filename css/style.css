@@ -1,0 +1,202 @@
+/* SmartKitchenReviews — Clean SEO Theme */
+:root {
+  --primary: #e85d04;
+  --primary-dark: #d45200;
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+  --text: #1a1a2e;
+  --text-light: #555;
+  --border: #e0e0e0;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --radius: 8px;
+  --max-w: 800px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Header */
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+.site-logo span { color: var(--text); }
+.site-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.site-nav a:hover { color: var(--primary); }
+
+/* Main */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Article */
+.article-header {
+  padding: 2.5rem 0 1.5rem;
+}
+.article-header h1 {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+.article-meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.article-content {
+  padding-bottom: 3rem;
+}
+.article-content h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.article-content h3 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+}
+.article-content p { margin-bottom: 1rem; }
+.article-content ul, .article-content ol {
+  margin: 0 0 1rem 1.5rem;
+}
+.article-content li { margin-bottom: 0.35rem; }
+.article-content strong { font-weight: 700; }
+
+/* Tables */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+.article-content th, .article-content td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.article-content th {
+  background: var(--bg-alt);
+  font-weight: 700;
+}
+.article-content tr:nth-child(even) { background: var(--bg-alt); }
+
+/* Affiliate Button */
+.affiliate-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff !important;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1.5rem;
+  transition: background 0.2s;
+}
+.affiliate-btn:hover { background: var(--primary-dark); }
+
+/* Homepage Cards */
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+.hero h1 { font-size: 2.4rem; line-height: 1.2; }
+.hero p { color: var(--text-light); font-size: 1.1rem; margin-top: 0.5rem; }
+
+.article-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem 0 3rem;
+}
+.article-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+.article-card:hover { box-shadow: var(--card-shadow); }
+.article-card .card-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+.article-card h2 {
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
+}
+.article-card h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.article-card h2 a:hover { color: var(--primary); }
+.article-card p {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--text);
+  color: #ccc;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.site-footer a { color: #fff; }
+
+/* Disclaimer */
+.disclaimer {
+  background: var(--bg-alt);
+  border-left: 4px solid var(--primary);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .article-header h1 { font-size: 1.6rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .site-nav { display: none; }
+}
